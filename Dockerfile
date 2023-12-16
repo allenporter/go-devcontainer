@@ -16,3 +16,6 @@ RUN cd /usr/local/bin/ && \
     tar xf kustomize_${KUSTOMIZE_VERSION}_linux_amd64.tar.gz && \
     chmod +x kustomize
 RUN kustomize version
+
+# devpod container expects /tmp to exist
+RUN mkdir /tmp && chmod 777 /tmp
