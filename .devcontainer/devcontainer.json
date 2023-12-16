@@ -2,14 +2,10 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/go
 {
 	"name": "Go",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/go:0-1.20-bullseye",
-
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-	// "features": {
-	// 	"ghcr.io/rio/features/kustomize:1": {}
-	// },
+	"build": {
+		"context": "..",
+		"dockerfile": "../Dockerfile"
+	},
 
 	// Configure tool-specific properties.
 	"customizations": {
